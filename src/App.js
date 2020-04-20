@@ -18,12 +18,12 @@ export default class App extends Component {
     //   .then(data => {
     //     this.setState({Gift:data.data})
     //   }).catch(error => {console.log('Something Went Wrong', error)});
-
+    this.performSearch('Kids');
     
   }
 
   performSearch = (query) =>{
-    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=dc6zaTOxFJmzC`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?api_key=tgP1Y022aCPqXHd5QCv1S81D5FebI97s&q=${query}&limit=25&offset=0&rating=G&lang=en`)
       .then(response => {
         const {data} = response.data;
         this.setState({
